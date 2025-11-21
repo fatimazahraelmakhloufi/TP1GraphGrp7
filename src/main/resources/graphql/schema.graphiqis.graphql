@@ -1,0 +1,30 @@
+type Query{
+    listEtudiants : [Etudiant]
+    getEtudiantById(id:ID):Etudiant
+    centres:[Centre]
+    getCentreById(id:ID):Centre
+}
+type Mutation{
+    addEtudiant(etudiant: EtudiantInput):Etudiant
+    updateEtudiant(id:ID, etudiant: EtudiantInput):Etudiant
+    deleteEtudiant(id:ID):String
+}
+
+type Etudiant{
+    id:ID
+    nom:String
+    prenom:String
+    genre:String
+    centre:Centre
+}
+type Centre{
+    id:ID
+    nom: String
+    adresse:String
+}
+input EtudiantInput{
+    nom:String
+    prenom:String
+    genre:String
+    centreId:ID
+}

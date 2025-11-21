@@ -1,4 +1,9 @@
 package ma.enset.tp1graphgrp7.dtos;
 
-public record EtudiantDTO() {
+import ma.enset.tp1graphgrp7.enums.Genre;
+
+public record EtudiantDTO(String nom,
+                          String prenom,
+                          Genre genre,
+                          Long centreId) {
 }
